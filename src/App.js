@@ -24,7 +24,7 @@ function App() {
       clearGame();
       alert(`Ta da ! ${winner} won the Game !`);
     }
-  }, [gameState]);
+  }, [gameState,checkWinner()]);
 
   const checkWinner = () => {
     const lines = [
@@ -58,7 +58,7 @@ function App() {
 
   return (
     <div className="app-header">
-      <p className="heading-text">React Tic Tac Toe - 2020</p>
+      <p className="heading-text">React Tic Tac Toe</p>
       <div className="row jc-center">
         <SquareComponent
           className="b-bottom-right"
@@ -112,7 +112,7 @@ function App() {
       <button className="clear-button" onClick={clearGame}>
         Clear Game
       </button>
-      <p className="fc-aqua fw-600">The Indian Dev</p>
+      <p className="fc-aqua fw-600">@Games.com</p>
     </div>
   );
 }
